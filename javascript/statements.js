@@ -24,3 +24,6 @@ if (x === 3) {
 } else {
   console.log(`x is now ${x}`);
 }
+
+// Change
+console.log('Now it prints this.');
