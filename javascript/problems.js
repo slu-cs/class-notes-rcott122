@@ -48,7 +48,7 @@ for (let i = 1; i < 11; i++) {
 }
 console.log(count);
 
-//finding biggest number in a array object
+//finding biggest number in a array object of courses
 const courses = [
   {cl: 'web', num: 332},
   {cl: 'langs', num: 364},
@@ -91,7 +91,7 @@ console.log(book.isAuthor('Clement Hurd')); // false
 const range = function(low, high) {
   const nums = [];
   for (let i = low; low < high; i++) {
-    nums.push[i];
+    nums.push(i);
   }
   return nums;
 };
