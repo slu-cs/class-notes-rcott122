@@ -2,7 +2,7 @@
 
 const mongoose = require('mongoose');
 
-//export  this function
+//export  this function (creating a module)
 module.exports = function() {
 
   //avoid warnings
