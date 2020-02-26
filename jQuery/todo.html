@@ -10,7 +10,7 @@
       <input type="text" name="right">
       <button type="submit">Submit</button>
     </form>
-    <div id="things to do"></div>
+    <div id="todo"></div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script>
 
@@ -38,8 +38,8 @@
         const p = $(`<p>Addition #${counter}</p>`);
 
         // Add to the page
-        $('#things to do').append(p);
-        $('#things to do').append(list);
+        $('#todo').append(p);
+        $('#todo').append(list);
       });
 
     </script>
