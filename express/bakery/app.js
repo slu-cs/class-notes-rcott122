@@ -6,7 +6,7 @@ const app = express();
 
 //respond to requests
 app.use(function(request, response, next){
-  console.log('---------------', new Date().toLocateString());
+  console.log('---------------', new Date().toLocaleTimeString());
   console.log(request.method, request.url);
   console.log('Body =', request.body);
   next(); // keeps handling this request
