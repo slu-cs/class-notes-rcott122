@@ -4,6 +4,11 @@ const express = require('express');
 //create the server
 const app = express();
 
+//ignore icon requests
+app.get('/favicon.ico', function(request, response) {
+  response.status(204).end();
+});
+
 //respond to requests
 app.use(function(request, response, next){
   console.log('---------------', new Date().toLocaleTimeString());
@@ -22,6 +27,10 @@ app.get('/', function(request, response){
     </ul>
   `);
 });
+
+//routing
+app.use('/cakes', require('./cakes.js'));
+app.use('/pies', require('./pies.js'));
 
 //handle undefined routes (middle ware)
 app.use(function(request, response, next){
