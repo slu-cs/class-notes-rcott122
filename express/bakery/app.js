@@ -30,7 +30,7 @@ app.use(function(request, response, next){
 });
 
 //handle other errors
-app.use(error, request, response, next){
+app.use(function(error, request, response, next){
   console.error(error.stack);
   response.status(500).send(error.message);
 });
