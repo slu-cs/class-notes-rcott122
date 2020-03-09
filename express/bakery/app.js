@@ -4,6 +4,10 @@ const express = require('express');
 //create the server
 const app = express();
 
+// Use a view engine
+app.set('view engine', 'ejs');
+app.set('views', './views');
+
 //ignore icon requests
 app.get('/favicon.ico', function(request, response) {
   response.status(204).end();
@@ -19,13 +23,14 @@ app.use(function(request, response, next){
 
 //give this app a homepage
 app.get('/', function(request, response){
-  response.send(`
-    <h1>Bakery</h1>
-    <ul>
-      <li><a href="/cakes">Cakes</a></li>
-      <li><a href="/pies">Pies</a></li>
-    </ul>
-  `);
+  response.render('index');
+  //response.send(`
+  //  <h1>Bakery</h1>
+    //<ul>
+      //<li><a href="/cakes">Cakes</a></li>
+      //<li><a href="/pies">Pies</a></li>
+    //</ul>
+  //`);
 });
 
 //routing
